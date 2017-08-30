@@ -1,0 +1,15 @@
+{
+  "name": "Skilled UI Biolerplate",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-watch": "*",
+    "gulp-uglify": "*",
+    "gulp-ruby-sass": "*"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-remove-files": "0.0.3",
+    "gulp-webserver": "^0.9.1"
+  }
+}

@@ -1,0 +1,878 @@
+@import 'variables';
+@import 'mixins';
+
+.section-company-info{
+    font-weight: 300;
+    color: $gray-dark;
+
+    .content-container{
+        padding-bottom: 0.9rem;
+
+        .content{
+
+            .breadcrumbs{
+                font-weight: 200;
+                padding: 12px 0px;
+                border-bottom: $gray-border 2px solid;
+                font-size: 1rem;
+                color: $gray-dark;
+
+                a{
+                    color: $gray-dark;
+                }
+                a:hover{
+                    color: $gray-light;
+                }
+            }
+
+            .company-attributes{
+                font-size: 1.1rem;
+                font-family: Nunito;
+                color: $gray;
+
+                h1{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin: 0px;
+                    margin-top: 1.5rem;
+                    margin-bottom: 0.5rem;
+                    color: $gray-dark;
+                }
+                h2{
+                    color: $gray-dark;
+                    font-size: 1.2rem;
+                    margin: 1rem 0px;
+                }
+                .company-name{
+                    color: $primary-blue;
+                    font-family: Montserrat;
+                }
+                .company-rating{
+                    color: $gray;
+                    margin-bottom: 1rem;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+
+                    .star-yellow{
+                        color: #fdd24f;
+                    }
+                    .star-gray{
+                        color: #b3b3b3;
+                    }
+                    .rating-count{
+                        margin-left: 1rem;
+
+                        .review-count {
+                            margin-left: 1rem;
+                            color: $gray-light;
+                        }
+                    }
+                }
+                .company-description{
+                    font-weight: 600;
+                    color: $gray-dark;
+                    margin-bottom: 2rem;
+                }
+                .company-lang-framework-title{
+                    font-family: Montserrat;
+                    text-transform: uppercase;
+                    color: $secondary_sidebar_title;
+                    font-weight: 500;
+                    margin-bottom: 2rem;
+                    letter-spacing: 2px;
+                }
+                .company-lang-framework{
+                    font-weight: 600;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .company-services-container{
+                display: block;
+                width: 100%;
+                position: relative;
+                .company-services:before{
+                    background: $primary-blue;
+                    content: " ";
+                    display: block;
+                    width: 50vw;
+                    height: 100%;
+                    position: absolute;
+                    left: -50%;
+                    top: 0;
+                    z-index: 0;
+                }
+                .company-services{
+                    background: $primary-blue;
+                    color: $white;
+                    padding: 3rem 1rem;
+                    margin: auto -15px;
+
+                    *{
+                        position: relative;
+                        z-index: 10;
+                    }
+
+                    .company-services-title{
+                        color: $primary-light-yellow;
+                        margin: 0rem 0rem 0rem 0rem;
+                        letter-spacing: 1px;
+                        font-size: 1.6rem;
+                        padding-left: 48px;
+                        font-weight: 500;
+
+                        .stripe{
+                            display: inline-block;
+                            position: absolute;
+                            margin-top: 10px;
+                            margin-left: -48px;
+                            width: 37px;
+                            height: 0px;
+                            border-bottom: 5px solid $primary-light-yellow;
+                        }
+                    }
+
+                    .service-item-title{
+                        font-size: 1.5rem;
+                        font-weight: 300;
+                        margin-top: 1.5rem;
+
+                        .service-item-title-number{
+                            color: $primary-light-yellow;
+                        }
+                        .service-item-title-name{
+                            font-weight: 400;
+                        }
+                    }
+                    .service-item-description{
+                        color: $gray-light;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .company-projects{
+
+                .company-projects-title{
+                    margin: 32px 0px;
+                    padding-left: 48px;
+                    color: $primary-blue;
+                    font-size: 1.6rem;
+
+                    .stripe{
+                        display: inline-block;
+                        position: absolute;
+                        margin-top: 10px;
+                        margin-left: -48px;
+                        width: 37px;
+                        height: 0px;
+                        border-bottom: 5px solid $primary-blue;
+                    }
+                }
+
+                .company-projects-thumbnail-list{
+                    display: inline-block;
+                    margin-left: 2px;
+
+                    a{ 
+                        width: 144px;
+                        height: 100px;
+                        line-height: 88px;
+                        background: #fff;
+                        border: 5px solid $gray;
+                        box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+                        text-align: center;
+                        float: left;
+                        margin: 0px 10px;
+                        border-radius: 0.25rem;
+                        padding: 0px;
+
+                        img{
+                            max-width: 84%;
+                            max-height: 84%;
+                        }
+                    }
+
+                    .is-not-active{
+                        border: 5px solid $gray;
+                    }
+                    .is-active{
+                        border: 5px solid $primary-light-yellow;
+                    }
+                }
+
+                .carousel-control-prev, .carousel-control-next, .carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover{
+                    color: #000;
+                    font-size: 1rem;
+                }
+
+                .carousel-control-prev i{
+                    margin-left: -2rem;
+                    margin-top: 0.4rem;
+                    //background: #333;
+                    padding: 1rem;
+                    border-radius: 4rem;
+                    width: 48px;
+                    height: 48px;
+                }
+
+                .carousel-control-next i{
+                    margin-right: -2rem;
+                    //background: #333;
+                    padding: 1rem;
+                    border-radius: 4rem;
+                    width: 48px;
+                    height: 48px;
+                }
+
+                .company-projects-list{
+                    margin: 32px 0px;
+
+                    .carousel-inner{
+                        padding: 0rem 1rem;
+                    }
+
+                    .carousel-item{
+                        border: 5px solid $primary-yellow;
+                        border-radius: 0.25rem;
+                        padding: 1rem 1rem 0rem 1rem;
+                        min-height: 286px;
+
+                        .carousel-item-row{
+                            width: 100%;
+                            display: block;
+
+                            .project-thumbnail{
+                                height: 240px;
+                                line-height: 240px;
+                                text-align: center;
+
+                                img{
+                                    max-width: 300px;
+                                    max-height: 180px;
+                                    display: inline-block;
+                                    margin: auto;
+                                }
+                            }
+
+                            .project-content{
+
+                                h4{
+                                    color: $primary-blue;
+                                    margin: 16px 0px;
+                                    font-weight: 600;
+                                    font-size: 1.6rem;
+                                    letter-spacing: 0px;
+                                    text-transform: uppercase;
+                                }
+                                .project-description{
+                                    p{
+                                        text-transform: uppercase;
+                                        font-weight: 500;
+                                        letter-spacing: 1px;
+                                        color: $gray;
+                                    }
+                                    .view-full-portfolio{
+                                        font-weight: 600;
+                                        font-size: 1.5rem;
+                                        position: absolute;
+                                        right: 1rem;
+                                        bottom: 0px;
+                                        color: $primary-blue;
+                                        letter-spacing: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .company-reviews-container{
+                display: block;
+                width: 100%;
+                position: relative;
+
+                .company-reviews:before{
+                    background: $primary-light-yellow;
+                    content: " ";
+                    display: block;
+                    width: 50vw;
+                    height: 100%;
+                    position: absolute;
+                    left: -50%;
+                    top: 0;
+                    z-index: 0;
+                }
+                .company-reviews{
+                    background: $primary-light-yellow;
+                    color: $primary-blue;
+                    padding: 3rem 1rem;
+                    margin: auto -15px;
+
+                    *{
+                        position: relative;
+                        z-index: 10;
+                    }
+
+                    .be-the-first{
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        text-decoration: underline;
+                        font-weight: 500;
+                        color: #00243a;
+                    }
+                    .be-the-first:hover{
+                        color: #004976;
+                    }
+
+                    .company-reviews-title{
+                        color: $primary-blue;
+                        margin: 0rem 0rem 2rem 0rem;
+                        letter-spacing: 1px;
+                        font-size: 1.6rem;
+                        padding-left: 48px;
+                        font-weight: 600;
+
+                        .stripe{
+                            display: inline-block;
+                            position: absolute;
+                            margin-top: 10px;
+                            margin-left: -48px;
+                            width: 37px;
+                            height: 0px;
+                            border-bottom: 5px solid $primary-blue;
+                        }
+                        .button-add-review{
+                            padding: 12px;
+                            background: $primary-blue;
+                            color: $white;
+                            font-size: 1rem;
+                            text-transform: uppercase;
+                            display: inline-block;
+                            position: absolute;
+                            right: 0px;
+                            margin-top: -0.5rem;
+                            @include box-shadow(4px, 4px, 0px, rgba(0,0,0,0.2));
+                        }
+                        .button-add-review:hover{
+                            background: $primary-light-blue;
+                        }
+                    }
+
+                    @media screen and (max-width: 992px) {
+                        .company-reviews-title{
+                            .button-add-review.desktop{
+                                display: none;
+                            }
+                        }
+                        .review-item{
+                            @include box-shadow(4px, 4px, 0px, rgba(0,0,0,0.2));
+                            background: $white;
+                            color: $gray;
+                            margin-bottom: 1rem;
+
+                            .be-the-first{
+                                display: block;
+                                width: 100%;
+                                text-align: center;
+                                font-weight: 500;
+                                color: #00243a;
+                            }
+                            .be-the-first:hover{
+                                color: #00243a;
+                            }
+
+                            .avatar-container{
+                                padding: 1rem 2rem;
+
+                                .avatar{
+                                    display: inline-block;
+                                    border: 1px solid $gray-border;
+                                    min-width: 48px;
+                                    min-height: 48px;
+                                }
+                            }
+
+                            .reviewer-name{
+                                display: inline-block;
+                                font-weight: 500;
+                                padding: 0rem 1rem;
+
+                                small{
+                                    font-weight: 300;
+                                    color: $gray;
+                                    display: inline-block;
+                                    margin-left: 1rem;
+                                }
+                            }
+                            .company-name{
+                                color: $gray-light;
+                                font-weight: 500;
+                                padding: 0rem 1rem;
+                                margin-bottom: 1rem;
+
+                                a{
+                                    color: $primary-blue;
+                                    font-weight: 500;
+                                }
+                            }
+                            .star-rating{
+                                display: inline;
+                                position: absolute;
+                                margin-left: 5rem;
+                                margin-top: -7rem;
+
+                                .fa-star{
+                                    color: $primary-light-yellow;
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            .fa-quote-right{
+                                display: none;
+                            }
+                            .review-content{
+                                padding: 0rem 1rem;
+
+                                .fa-quote-right{
+                                    display: inline-block;
+                                    display: inline-block;
+                                    float: left;
+                                    clear: left;
+                                    font-size: 2.5rem;
+                                    margin-right: 12px;
+                                    color: $gray-lighter;
+                                }
+
+                            }
+                            .project-budget{
+                                display: inline-block;
+                                width: 45%;
+                                padding: 1rem;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                color: $sidebar_title;
+
+                                .fa-dollar{
+                                    background: $sidebar_title;
+                                    padding: 2px;
+                                    color: $white;
+                                }
+                            }
+                            .project-duration{
+                                display: inline-block;
+                                width: 50%;
+                                padding: 1rem;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                color: $sidebar_title;
+                            }
+
+                            .project-scope{
+                                font-size: 0.8rem;
+                                color: $sidebar_title;
+                                padding: 0rem 1rem;
+                            }
+
+                            .project-scope-text, .project-recommendation, .project-rehire{
+                                padding: 0rem 1rem;
+                            }
+                            .project-recommendation, .project-rehire{
+                                font-size: 0.75rem;
+
+                                .fa {
+                                    display: inline-block;
+                                    text-align: center;
+                                    font-size: 0.8rem;
+                                    width: 16px;
+                                }
+                            }
+                            .project-recommendation{
+                                margin-top: 1rem;
+                            }
+                            .project-rehire{
+                                margin-bottom: 1rem;
+                            }
+
+                            .review-rating{
+                                border-top: 2px solid $gray-border;
+                            }
+                        }
+                    }
+                    @media screen and (min-width: 993px) {
+                        .company-reviews-title{
+                            .button-add-review.mobile{
+                                display: none;
+                            }
+                        }
+
+                        .review-item{
+                            @include box-shadow(4px, 4px, 0px, rgba(0,0,0,0.2));
+                            background: $white;
+                            padding: 2rem 0rem;
+
+                            .col-md-2{
+                                text-align: right;
+                                padding: 0rem 0rem 1rem 0rem;
+
+                                .avatar{
+                                    display: inline-block;
+                                    border: 1px solid $gray-border;
+                                    max-width: 64px;
+                                    max-height: 64px;
+                                    min-width: 48px;
+                                    min-height: 48px;
+                                }
+                                .fa-quote-right{
+                                    font-size: 2rem;
+                                    color: $gray-light;
+                                    padding-left: 1rem;
+                                }
+                                .project-scope{
+                                    font-size: 0.8rem;
+                                    padding-left: 1rem;
+                                    color: $sidebar_title;
+                                    padding-top: 1rem;
+                                    display: block;
+                                }
+                            }
+                            .reviewer-name{
+                                display: inline-block;
+                                font-weight: 500;
+
+                                small{
+                                    font-weight: 300;
+                                    color: $gray;
+                                    display: inline-block;
+                                    margin-left: 1rem;
+                                }
+                            }
+                            .company-name{
+                                color: $gray-light;
+                                font-weight: 500;
+
+                                a{
+                                    color: $primary-blue;
+                                    font-weight: 500;
+                                }
+                            }
+                            .star-rating{
+                                display: inline-block;
+                                margin-top: 0.5rem;
+
+                                .fa-star{
+                                    color: $primary-light-yellow;
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            .review-content{
+                                color: $gray;
+                            }
+                            .project-budget{
+                                display: inline-block;
+                                width: 40%;
+                                padding: 1rem;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                color: $sidebar_title;
+
+                                .fa-dollar{
+                                    background: $sidebar_title;
+                                    padding: 2px;
+                                    color: $white;
+                                }
+                            }
+                            .project-duration{
+                                display: inline-block;
+                                width: 40%;
+                                padding: 1rem;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                color: $sidebar_title;
+                            }
+
+                            .project-scope-text{
+                                border-left: 2px solid $sidebar_title;
+                                padding-left: 1rem;
+                                color: $sidebar_title;
+                                margin: 1rem 0rem;
+                            }
+
+                            .project-recommendation, .project-rehire{
+                                .fa {
+                                    display: inline-block;
+                                    text-align: center;
+                                    font-size: 1.5rem;
+                                    width: 36px;
+                                }
+                            }
+                        }
+                    }
+                    .review-rating{
+                        padding: 1rem;
+
+                        .rating-title{
+                            font-size: 0.8rem;
+                            color: $sidebar_title;
+                        }
+
+                        .rating-score{
+                            display: block;
+                            margin-bottom: 1rem;
+
+                            span{
+                                width: 18%;
+                                height: 8px;
+                                margin-right: -3px;
+                            }
+                            .rating-score-active{
+                                transform: skewX(40deg);
+                                display: inline-block;
+                                background: $primary-blue;
+                            }
+                            .rating-score-inactive{
+                                transform: skewX(40deg);
+                                display: inline-block;
+                                background: $primary-blue;
+                                background: $gray-light;
+                            }
+                            .rating-score-active.first:before{
+                                background: $primary-blue;
+                                transform: skewX(-40deg);
+                                width: 20px;
+                                height: 8px;
+                                content: ' ';
+                                display: block;
+                                position: absolute;
+                                margin-left: -4px;
+                            }
+                            .rating-score-inactive.first:before{
+                                background: $gray-light;
+                                transform: skewX(-40deg);
+                                width: 20px;
+                                height: 8px;
+                                content: ' ';
+                                display: block;
+                                position: absolute;
+                                margin-left: -4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sidebar-container{
+        background: $primary-sidebar-bg;
+        position: relative;
+        height: 100%;
+        display: block;
+        margin: auto -15px;
+
+        .sidebar:after{
+            background: $primary-sidebar-bg;
+            content: " ";
+            display: block;
+            width: 50vw;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+        .sidebar{
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+            .company-info{
+                margin-top: 0px;
+                font-size: 1rem;
+                position: relative;
+                z-index: 2;
+
+                .company-phone{
+                    display: block;
+                    margin-top: 0.75rem;
+                }
+
+                .company-logo-container{
+                    width: 220px;
+                    text-align: center;
+                    border: none;
+                    padding: 1rem;
+                    margin-bottom: 1rem;
+
+                    .company-logo {
+                        max-width: 180px;
+                        max-height: 180px;
+                    }
+                }
+
+                .company-btns-container{
+                    margin-bottom: 1rem;
+
+                    .btn-company-contact{
+                        margin-bottom: 0.5rem;
+                        background: $primary-light-yellow;
+                        color: $primary-blue;
+                        text-transform: uppercase;
+                        font-size: 1.1rem;
+                        width: 100%;
+                        border: none;
+                        cursor: pointer;
+                        @include border-radius(0px);
+                        @include box-shadow(5px, 5px, 0px, $gray-light);
+                    }
+
+                    .visit-website{
+                        letter-spacing: 0.15rem;
+
+                        i{
+                            color: $primary-blue;
+                        }
+                    }
+
+                    .request-proposal{
+
+                    }
+                }
+
+                h2{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin: 16px 0px;
+                }
+                ul{
+                    list-style: none;
+                    padding: 0px;
+
+                    li{
+                        line-height: 150%;
+                        margin-bottom: 1rem;
+                        color: $black;
+
+                        .fa{
+                            font-weight: 600;
+                            color: #738694;
+                        }
+                        span.sidebar-title{
+                            font-weight: 400;
+                            color: #738694;
+                            margin-bottom: 1rem;
+                        }
+                        .address-list{
+                            li{
+                                margin-bottom: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    margin-bottom: -1em;
+}
+
+.most-bottom{
+    margin-bottom: 24px;
+}
+
+@media screen and (min-width: 993px) {
+    .company-attributes{
+        .company-logo{
+            display: none;
+        }
+    }
+
+    .company-projects .company-projects-mobile{
+        display: none;
+    }
+    .section-company-info{
+        .sidebar-container{
+            .sidebar{
+                padding: 3rem 0rem 3rem 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .company-projects-thumbnail-list {
+        display: none !important;
+    }
+
+    .company-projects .company-projects-list{
+        display: none;
+    }
+    .company-projects .company-projects-mobile{
+        display: block;
+
+        .company-projects-mobile-item{
+            border: 5px solid $primary-light-yellow;
+            margin-bottom: 1rem;
+
+            .project-thumbnail{
+                width: 100%;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .project-content{
+                padding: 1rem;
+
+                h4{
+                    font-weight: 600;
+                    color: $primary-blue;
+                }
+
+                .view-full-portfolio{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: $primary-blue;
+                }
+            }
+
+        }
+    }
+
+    .company-attributes{
+        .company-logo{
+            max-width: 100%;
+            display: block;
+            margin: 1rem auto;
+        }
+        .company-name{
+            text-align: center;
+
+            .sponsored{
+                color: #FF9233;
+            }
+        }
+        .company-rating{
+            .rating-star{
+                font-size: 0.75rem;
+            }
+            .rating-count{
+                font-size: 0.75rem;
+            }
+        }
+    }
+    .section-company-info{
+        .sidebar-container{
+            .sidebar{
+                padding: 2rem;
+            }
+        }
+    }
+    .sidebar .company-info .company-logo-container{
+        display: none;
+    }
+}
