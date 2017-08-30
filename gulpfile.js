@@ -13,19 +13,8 @@ gulp.task('scripts', function () {
 
 gulp.task('styles', function () {
     sass("assets/scss/*.scss", {sourcemap: true})
-            .pipe(gulp.dest('html/build/css/temp'));
+            .pipe(gulp.dest('html/build/css'));
 
-    /*gulp.src([
-     'html/build/css/temp/shared.css',
-     'html/build/css/temp/home.css',
-     'html/build/css/temp/login.css',
-     'html/build/css/temp/common.css',
-     'html/build/css/temp/companies.css',
-     'html/build/css/temp/company.css',
-     'html/build/css/temp/resources.css',
-     'html/build/css/temp/reviews.css'
-     ]).pipe(concat("style.css"))
-     .pipe(gulp.dest("html/build/css"));*/
 });
 
 gulp.task('watch', function () {
