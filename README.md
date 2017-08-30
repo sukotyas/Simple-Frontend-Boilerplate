@@ -1,9 +1,4 @@
-# [Skilled Theme] (https://skilled.co)
-
-This is the project that will be used for SKilled Wordpress Theme.
-
-## Main Repository
-* https://bitbucket.org/cyberiustech/skilled-ui
+# [Simple Frontend Boilerplate]
 
 ## Requirements
 * Node.JS (npm)

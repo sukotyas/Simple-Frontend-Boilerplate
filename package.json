@@ -1,5 +1,5 @@
 {
-  "name": "Skilled UI Biolerplate",
+  "name": "simple-frontend-boilerplate",
   "version": "1.0.0",
   "dependencies": {
     "gulp": "*",
