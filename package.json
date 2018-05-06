@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.1",
     "gulp-ruby-sass": "*",
     "gulp-uglify": "*",
     "gulp-watch": "*"

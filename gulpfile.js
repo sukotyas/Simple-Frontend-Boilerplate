@@ -4,28 +4,29 @@ var gulp = require('gulp'),
         concat = require('gulp-concat'),
         webserver = require('gulp-webserver');
 
+gulp.task('scripts');
+gulp.task('styles');
+gulp.task('server');
 
-gulp.task('scripts', function () {
+function scripts() {
     gulp.src("assets/js/*.js")
             .pipe(uglify())
             .pipe(gulp.dest('html/build/js'));
-});
+}
 
-gulp.task('styles', function () {
+function styles() {
     sass("assets/scss/*.scss", {sourcemap: true})
             .pipe(gulp.dest('html/build/css'));
 
-});
-
-gulp.task('watch', function () {
-    gulp.watch("assets/scss/*.scss", ["styles"]);
-    gulp.watch("assets/js/*.js", ["scripts"]);
+}
+function watch() {
+    gulp.watch("assets/scss/*.scss", gulp.series("styles"));
+    gulp.watch("assets/js/*.js", gulp.series("scripts"));
     gulp.watch("*.html", function () {
         location.reload();
     });
-});
-
-gulp.task('webserver', function () {
+}
+function server() {
     gulp.src('html')
             .pipe(webserver({
                 fallback: 'index.html',
@@ -36,6 +37,12 @@ gulp.task('webserver', function () {
                 },
                 open: true
             }));
-});
+}
 
-gulp.task('default', ['styles', 'scripts', 'webserver', 'watch']);
+exports.styles = styles;
+exports.scripts = scripts;
+exports.watch = watch;
+exports.server = server;
+
+
+gulp.task('default', gulp.parallel(styles, scripts, server, watch));
